@@ -41,6 +41,7 @@ def generate_baby_names(gender: str,nationality:str) -> list[str]:
 # main code
 st.title('AYn Name Generator')
 
+# DO NOT CHANGE BELOW ----
 # get open AI key from user
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
@@ -53,6 +54,8 @@ if not openai_api_key:
 import os
 os.environ['OPENAI_API_KEY'] = openai_api_key
 llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
+
+# DO NOT CHANEGE ABOVE ----
 
 
 # ask user for what they want
