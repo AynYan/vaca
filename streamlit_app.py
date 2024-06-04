@@ -9,31 +9,31 @@ def generate_baby_names(gender: str,nationality:str) -> list[str]:
     Generate a list of 5 baby names
 
     Parameters:
-    gender (str): gender of baby
-    nationailty (str) : nationailty of baby
+    age (str): age of person
+    nationailty (str) : nationailty of person
 
     Returns:
-    list: list of baby names
+    list: list of peoples' names
     """
 
     prompt_template_name = PromptTemplate(
         input_variables=['gender', 'nationality'],
-        template="""I want to find a name for a {nationality} {gender} baby. 
-                    Suggest top 5 popular names for the baby.
+        template="""I want to find a name for a {nationality} {age} person. 
+                    Suggest top 3 popular names for the baby.
                     Return it as a comma separated list """
                 )
 
     name_chain = LLMChain(llm=llm,
                           prompt=prompt_template_name,
-                          output_key='baby_names')
+                          output_key='people_names')
 
     chain = SequentialChain(
         chains=[name_chain],
-        input_variables=['gender', 'nationality'],
-        output_variables=['baby_names']
+        input_variables=['age', 'nationality'],
+        output_variables=['people_names']
     )
 
-    response = chain({'gender': gender,
+    response = chain({'age': age,
                       'nationality': nationality})
     return response
 
@@ -59,16 +59,16 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 
 
 # ask user for what they want
-gender = st.selectbox("Choose a gender",
-                             ("Girl", "Boy"))
+age = st.selectbox("Choose an age group",
+                             ("0-12","13-21","22-44","45-65","66-89","90-110"))
 nationality = st.selectbox("Choose the nationality", 
-                                  ("American", "Indian", "Chinese"))
+                                  ("American", "Asian","European","African","South American"))
 
 # get the answer from LLM
-if gender and nationality:
-    response = generate_baby_names(gender, nationality)
-    baby_names = response['baby_names'].strip().split(",")
-    st.write("** Top 5 Baby Names **")
+if age and nationality:
+    response = generate_people_names(age, nationality)
+    people_names = response['people_names'].strip().split(",")
+    st.write("** Top 3 Baby Names **")
 
-    for name in baby_names:
+    for name in people_names:
         st.write("--", name)
