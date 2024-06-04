@@ -58,8 +58,8 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 # ask user for what they want
 gender = st.selectbox("Choose a gender",
                              ("Girl", "Boy"))
-nationality = st.selectbox("Choose the nationality", 
-                                  ("American", "Indian", "Chinese"))
+#nationality = st.selectbox("Choose the nationality", 
+ #                                 ("American", "Indian", "Chinese"))
 
 # get the answer from LLM
 if gender and nationality:
