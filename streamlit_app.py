@@ -39,7 +39,7 @@ def generate_baby_names(gender: str,nationality:str) -> list[str]:
 
 
 # main code
-st.title('Baby Name Generator')
+st.title('AYn Name Generator')
 
 # get open AI key from user
 with st.sidebar:
