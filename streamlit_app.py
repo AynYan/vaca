@@ -65,7 +65,7 @@ favorite_book = st.text_input("Enter the name of your favorite book: ")
 # get the answer from LLM
 if favorite_book_series and favorite_book:
     response = generate_books_to_read(favorite_book_series, favorite_book)
-    people_names = response['books_to_read'].strip().split(",")
+    books_to_read = response['books_to_read'].strip().split(",")
     st.write("** Top 5 Books to Read **")
 
     for book in books_to_read:
