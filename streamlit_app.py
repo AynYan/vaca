@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 
-def generate_baby_names(gender: str,nationality:str) -> list[str]:
+def generate_people_names(gender: str,nationality:str) -> list[str]:
     """
     Generate a list of 5 baby names
 
