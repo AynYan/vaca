@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 
-def generate_boosk_to_read(favorite_book: str,favorite_book_series:str) -> list[str]:
+def generate_books_to_read(favorite_book: str,favorite_book_series:str) -> list[str]:
     """
     Generate a list of 5 baby names
 
