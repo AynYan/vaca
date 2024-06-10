@@ -39,7 +39,7 @@ def generate_books_to_read(favorite_book: str,favorite_book_series:str) -> list[
 
 
 # main code
-st.title('AYn Name Generator')
+st.title('Ayn Book Recommendation Center')
 
 # DO NOT CHANGE BELOW ----
 # get open AI key from user
