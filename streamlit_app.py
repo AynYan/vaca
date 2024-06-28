@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 
-def generate_the_vaca_vaca(q1: str,q2:str) -> list[str]:
+def generate_the_vaca_vaca(q1: str,q2:str, q3: str,q4:str, q5: str,q6:str,q7:str) -> list[str]:
     """
     Generate a list of 3 recommendations for a trip
 
