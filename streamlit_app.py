@@ -47,11 +47,11 @@ def generate_the_vaca_vaca(q1: str,q2:str) -> list[str]:
     )
 
     response = chain({'q1': q1,
-                      'q2': q2
-                      'q3': q3
-                      'q4': q4
-                      'q5': q5
-                      'q6': q6
+                      'q2': q2,
+                      'q3': q3,
+                      'q4': q4,
+                      'q5': q5,
+                      'q6': q6,
                       'q7': q7})
     return response
 
