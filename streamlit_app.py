@@ -85,7 +85,7 @@ q5 = st.text_input("Do you prefer traveling within your own country or are you o
 q6 = st.text_input("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ")
 q7 = st.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
 
-get the answer from LLM
+#get the answer from LLM
 if q2 and q1 and q3 and q4 and q5 and q6 and q7:
     response = generate_the_vaca_vaca(q2, q1,q3,q4,q5,q6,q7)
     the_vaca_vaca = response['the_vaca_vaca'].strip().split(",")
