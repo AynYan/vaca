@@ -25,7 +25,7 @@ def generate_the_vaca_vaca(q1: str,q2:str, q3: str,q4:str, q5: str,q6:str,q7:str
     prompt_template_name = PromptTemplate(
         input_variables=['q2', 'q1','q3','q4','q5','q6','q7'],
         template="""= I would like to go on vacation. 
-        Use these 7 questions and answers to determine a place for me to travel to(I live in USA).
+        Use these 7 questions and answers to determine 3 places for me to travel to(I live in USA).
         What kind of climate do you prefer for your vacation?: {}
         Are you looking for a beach destination, a city with a warm climate, or a mix of both?: {}
         Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?:{}
@@ -88,6 +88,6 @@ q7 = st.text_input("Are you interested in a particular region of the USA, such a
 #get the answer from LLM
 if q2 and q1 and q3 and q4 and q5 and q6 and q7:
     response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
-    the_vaca_vaca = response['the_vaca_vaca'].strip().split(",")
+    the_vaca_vaca = response['the_vaca_vaca']
     st.write("** Top 3 Place to Visit **")
     st.write(the_vaca_vaca)
