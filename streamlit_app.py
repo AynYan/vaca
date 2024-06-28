@@ -87,7 +87,7 @@ q7 = st.text_input("Are you interested in a particular region of the USA, such a
 
 #get the answer from LLM
 if q2 and q1 and q3 and q4 and q5 and q6 and q7:
-    response = generate_the_vaca_vaca(q2, q1,q3,q4,q5,q6,q7)
+    response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
     the_vaca_vaca = response['the_vaca_vaca'].strip().split(",")
     st.write("** Top 3 Place to Visit **")
 
