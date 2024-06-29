@@ -85,7 +85,7 @@ q2 = st.text_input("Are you looking for a beach destination, a city with a warm 
 q3 = st.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
 q4 = st.text_input("Are you interested in exploring cultural and historical sites during your vacation?: ")
 q5 = st.text_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
-q6 = st.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["yes","no"])
+q6 = st.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["no","hotel","resort","vacation rental","something else(villa)"])
 q7 = st.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
 
 #get the answer from LLM
