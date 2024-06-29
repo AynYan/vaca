@@ -25,7 +25,10 @@ def generate_the_vaca_vaca(q1: str,q2:str, q3: str,q4:str, q5: str,q6:str,q7:str
     prompt_template_name = PromptTemplate(
         input_variables=['q2', 'q1','q3','q4','q5','q6','q7'],
         template="""= I would like to go on vacation. 
-        Use these 7 questions and answers to determine 3 places for me to travel to(I live in USA).
+        Use these 7 questions and answers to determine 3 places for me to travel to(I live in USA). 
+        Write a list of activities that we can do at each of these spots using these questions and answers
+        Also write a brief paragraph summarizing the places.
+        
         What kind of climate do you prefer for your vacation?: {}
         Are you looking for a beach destination, a city with a warm climate, or a mix of both?: {}
         Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?:{}
@@ -81,8 +84,8 @@ q1 = st.text_input("What kind of climate do you prefer for your vacation?: ")
 q2 = st.text_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
 q3 = st.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
 q4 = st.text_input("Are you interested in exploring cultural and historical sites during your vacation?: ")
-q5 = st.text_input("Do you prefer traveling within your own country or are you open to international destinations?:: ")
-q6 = st.text_input("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ")
+q5 = st.text_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
+q6 = st.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["yes","no"])
 q7 = st.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
 
 #get the answer from LLM
