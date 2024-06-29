@@ -83,9 +83,9 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 q1 = st.text_input("What kind of climate do you prefer for your vacation?: ")
 q2 = st.text_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
 q3 = st.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
-q4 = st.text_input("Are you interested in exploring cultural and historical sites during your vacation?: ")
+q4 = st.selectbox("Are you interested in exploring cultural and historical sites during your vacation?: ",["Pick an option","Yes","No"])
 q5 = st.text_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
-q6 = st.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["Pick an option","no","hotel","resort","vacation rental","something else(villa)"])
+q6 = st.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["Pick an option","No","Hotel","Resort","Vacation Rental","Other"])
 q7 = st.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
 
 #get the answer from LLM
