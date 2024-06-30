@@ -101,7 +101,7 @@ if q1:
                     if q6:
                         ph.empty()
                         q7 = ph.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
-                        ph.empty()
+                        
 #get the answer from LLM
 if q1 and q2 and q3 and q4 and q5 and q6 and q7:
     response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
