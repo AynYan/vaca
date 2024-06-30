@@ -88,7 +88,7 @@ if prompt := st.chat_input(queso_aka_cheese[count]):
     this = []
     count = 1
     this.append(prompt)
-    foo = prompt.chat_input(queso_aka_cheese[count]):
+    foo = prompt.chat_input(queso_aka_cheese[count])
     count += 1
     this.append(foo)
     if count == 2:
