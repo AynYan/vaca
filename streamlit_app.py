@@ -88,9 +88,9 @@ if prompt := st.chat_input(queso_aka_cheese[count]):
     this = []
     count = 1
     this.append(prompt)
-    foo = prompt.chat_input(queso_aka_cheese[count])
+    prompt.chat_input(queso_aka_cheese[count])
     count += 1
-    this.append(foo)
+    this.append(prompt)
     if count == 2:
         #response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
         st.write(this)
