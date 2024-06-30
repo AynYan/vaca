@@ -89,7 +89,7 @@ if q1:
     ph.empty()
     if q2:
         q3 = ph.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
-        ph.empty
+        ph.empty()
         if q3:    
             q4 = ph.selectbox("Are you interested in exploring cultural and historical sites during your vacation?: ",["Pick an option","Yes","No","Maybe"])
             ph.empty()
@@ -101,7 +101,7 @@ if q1:
                     ph.empty()
                     if q6:
                         q7 = ph.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
-                        ph.empty
+                        ph.empty()
 #get the answer from LLM
 if q1 and q2 and q3 and q4 and q5 and q6 and q7:
     response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
