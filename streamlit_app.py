@@ -85,7 +85,7 @@ this = []
 q2 = None
 #q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
 count = 0
-if prompt := st.chat_input(queso_aka_cheese[count])
+if prompt := st.chat_input(queso_aka_cheese[count]):
     count = 1
     this.append(prompt)
     with st.chat_message(queso_aka_cheese[count]):
