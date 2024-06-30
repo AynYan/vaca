@@ -79,7 +79,8 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 # DO NOT CHANGE ABOVE ----
 
 queso_aka_cheese = ["What kind of climate do you prefer for your vacation?",
-                   "Are you looking for a beach destination, a city with a warm climate, or a mix of both?"]
+                   "Are you looking for a beach destination, a city with a warm climate, or a mix of both?",
+                   "duh"]
 # ask user for what they want
 #q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
 count = 0
@@ -87,7 +88,7 @@ if prompt := st.chat_input(queso_aka_cheese[count]):
     this = []
     count = 1
     this.append(prompt)
-    with st.chat_input(queso_aka_cheese[count]):
+    with st.chat_message(queso_aka_cheese[count]):
         count += 1
         this.append(prompt)
         if count == 2:
