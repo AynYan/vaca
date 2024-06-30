@@ -81,14 +81,13 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 queso_aka_cheese = ["What kind of climate do you prefer for your vacation?",
                    "Are you looking for a beach destination, a city with a warm climate, or a mix of both?"]
 # ask user for what they want
-q2 = None
 #q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
 count = 0
 if prompt := st.chat_input(queso_aka_cheese[count]):
     this = []
     count = 1
     this.append(prompt)
-    with st.chat_message(queso_aka_cheese[count]):
+    with st.chat_input(queso_aka_cheese[count]):
         count += 1
         this.append(prompt)
         if count == 2:
@@ -97,8 +96,8 @@ if prompt := st.chat_input(queso_aka_cheese[count]):
             count = 0
             this = []
 
-#if q1:
-#    q2 = st.chat_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
+#q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
+#q2 = st.chat_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
 #q3 = st.chat_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
 #q4 = st.chat_input("Are you interested in exploring cultural and historical sites during your vacation? ")
 #q5 = st.chat_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
