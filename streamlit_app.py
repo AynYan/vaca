@@ -80,6 +80,7 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature = 0.6)
 
 
 # ask user for what they want
+q2 = None
 q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
 if q1:
     q2 = st.chat_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
