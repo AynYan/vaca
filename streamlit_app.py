@@ -86,20 +86,24 @@ q1 = ph.text_input("What kind of climate do you prefer for your vacation?: ")
 if q1:
     ph.empty()
     q2 = ph.text_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
-    ph.empty()
     if q2:
-        q3 = ph.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
         ph.empty()
+        q3 = ph.text_input(" Do you prefer a vacation spot that is more relaxed and laid-back or one that offers a lot of activities and entertainment?: ")
+        
         if q3:    
-            q4 = ph.selectbox("Are you interested in exploring cultural and historical sites during your vacation?: ",["Pick an option","Yes","No","Maybe"])
             ph.empty()
-            if q4:        
-                q5 = ph.text_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
+            q4 = ph.selectbox("Are you interested in exploring cultural and historical sites during your vacation?: ",["Pick an option","Yes","No","Maybe"])
+            
+            if q4:    
                 ph.empty()
+                q5 = ph.text_input("Do you prefer traveling within your own country or are you open to international destinations?: ")
+                
                 if q5:
-                    q6 = ph.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["Pick an option","I dont care","Hotel","Resort","Vacation Rental","Other"])
                     ph.empty()
+                    q6 = ph.selectbox("Do you have a preference for a certain type of accommodation, such as a resort, hotel, vacation rental, or something else?: ",["Pick an option","I dont care","Hotel","Resort","Vacation Rental","Other"])
                     if q6:
+                        ph.empty()
+
                         q7 = ph.text_input("Are you interested in a particular region of the USA, such as the East Coast, West Coast, South, or somewhere else?: ")
                         ph.empty()
 #get the answer from LLM
