@@ -88,14 +88,14 @@ if prompt := st.chat_input(queso_aka_cheese[count]):
     this = []
     count = 1
     this.append(prompt)
-    with st.chat_message(queso_aka_cheese[count]):
-        count += 1
-        this.append(prompt)
-        if count == 2:
-            #response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
-            st.write(this)
-            count = 0
-            this = []
+    foo = prompt.chat_input(queso_aka_cheese[count]):
+    count += 1
+    this.append(foo)
+    if count == 2:
+        #response = generate_the_vaca_vaca(q1, q2,q3,q4,q5,q6,q7)
+        st.write(this)
+        count = 0
+        this = []
 
 #q1 = st.chat_input("What kind of climate do you prefer for your vacation?")
 #q2 = st.chat_input("Are you looking for a beach destination, a city with a warm climate, or a mix of both?: ")
